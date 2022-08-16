@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用spring来创建对象-->
+    <!--    id=变量名
+            class =new的对象
+            property 相当于给对象中属性设置一个值
+    -->
+    <bean id="UserDaoImpl" class="com.hubin.pojo.UserDaoImpl"></bean>
+    <bean id="UserDaoMysqlImpl" class="com.hubin.pojo.UserDaoMysqlImpl"></bean>
+    <bean id="UserServiceImpl" class="com.hubin.service.UserServiceImpl">
+        <property name="userDao" ref="UserDaoImpl"></property>
+    </bean>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>

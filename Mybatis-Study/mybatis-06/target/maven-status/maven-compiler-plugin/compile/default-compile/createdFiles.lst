@@ -1,0 +1,4 @@
+com\hubin\utils\IDUtil.class
+com\hubin\pojo\Blog.class
+com\hubin\mapper\BlogMapper.class
+com\hubin\utils\MybatisUtils.class

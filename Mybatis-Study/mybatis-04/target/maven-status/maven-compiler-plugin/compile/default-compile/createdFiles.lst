@@ -1,0 +1,3 @@
+com\hubin\utils\MybatisUtils.class
+com\hubin\dao\UserMapper.class
+com\hubin\pojo\User.class

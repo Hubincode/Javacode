@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Address" class="com.hubin.pojo.Address"></bean>
+
+    <bean id="Student" class="com.hubin.pojo.Student">
+<!--        第一种注入普通注入-->
+        <property name="name" value="hubin"></property>
+<!--        第二种bean注入-->
+        <property name="address" ref="Address"></property>
+        <property name="books">
+            <array>
+                <value>123</value>
+                <value>1245</value>
+                <value>123456</value>
+            </array>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="1" value="11"></entry>
+                <entry key="2" value="22"></entry>
+                <entry key="3" value="33"></entry>
+                <entry key="4" value="44"></entry>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>just some string1</value>
+                <value>just some string2</value>
+                <value>just some string3</value>
+                <value>just some string4</value>
+            </set>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>123</value>
+                <value>123</value>
+                <value>123</value>
+                <value>123</value>
+            </list>
+        </property>
+        <property name="info">
+            <props>
+
+            </props>
+        </property>
+        <property name="wife">
+            <value>123</value>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--使用spring来创建对象-->
+<!--    id=变量名
+        class =new的对象
+        property 相当于给对象中属性设置一个值
+-->
+<!--    <bean id="hello" class="com.hubin.pojo.Hello">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--        <property name="str" value="Spring"></property>-->
+<!--    </bean>-->
+
+    <bean id="hello" class="com.hubin.pojo.Hello">
+        <!-- collaborators and configuration for this bean go here -->
+        <constructor-arg index="0" value="hubin "></constructor-arg>
+    </bean>
+<!-- more bean definitions go here -->
+
+    <!--设置别名：在获取Bean的时候可以使用别名获取-->
+    <alias name="hello" alias="helloNew"/>
+</beans>

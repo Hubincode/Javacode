@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hubin.dao.UserMapper">
+    <insert id="addUser" parameterType="com.hubin.pojo.User">
+        insert into mybatis.user (id,name,pwd) values (#{id},#{name},#{pwd})
+    </insert>
+
+    <update id="updateUser" parameterType="com.hubin.pojo.User">
+        update mybatis.user set name=#{name}, pwd=#{pwd} where id=#{id}
+    </update>
+    <delete id="deleteUser" parameterType="com.hubin.pojo.User">
+        delete from user where id=#{id}
+    </delete>
+
+    <select id="selectUserByNP2" parameterType="map" resultType="com.hubin.pojo.User">
+        select * from  mybatis.user where name=#{username} and  pwd=#{pwd}
+    </select>
+
+    <select id="selectUserByNP" resultType="com.hubin.pojo.User">
+        select * from  mybatis.user where name=#{username} and pwd=#{pwd}
+    </select>
+
+    <select id="selectUserById" resultType="com.hubin.pojo.User">
+        select * from  mybatis.user where id=#{id}
+    </select>
+
+    <select id="selectUser" resultType="com.hubin.pojo.User">
+        select * from  mybatis.user
+    </select>
+
+
+
+</mapper>

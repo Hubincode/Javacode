@@ -1,0 +1,5 @@
+com\hubin\dao\books\BookMapper.class
+com\hubin\service\books\BookService.class
+com\hubin\controller\books\BookController.class
+com\hubin\service\books\BookServiceImpl.class
+com\hubin\pojo\Books.class
